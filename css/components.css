@@ -10,6 +10,12 @@ h1 {
     font-weight: bold;
 }
 
+quote {
+    color: rgb(0, 102, 0);
+    font-family: monospace;
+    font-size: 20px;
+}
+
 div {
     color: rgb(0, 102, 0);
     text-align: center;
