@@ -14,9 +14,9 @@
 
     <script src="js/angular.min.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
-
     <script src="js/jquery.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
 
     <script src="js/app.js"></script>
 
@@ -27,15 +27,14 @@
 </head>
 
 <body>
-    <h1 align="center">Ilum1n4ti T0d0 L1st</h1>
+    <h1>Ilum1n4ti T0d0 L1st</h1>
     <br>
-    <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="completedPerCent()" aria-valuemin="0" aria-valuemax="100" style="{width : ( completedPerCent() + '%' ) }">
-            <span class="sr-only">70% Complete</span>
-        </div>
-    </div>
-
     <div ng-controller="todoController">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{completedPerCent()}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width : ( completedPerCent() + '%' ) }">
+                <span ng-show="completedPerCent() > 0">Progress({{completedPerCent()}}%)</span>
+            </div>
+        </div>
         <form name="frm" ng-submit="addTodo()">
             <input type="text" name="newtodo" ng-model="newTodo" required />
             <button ng-disabled="frm.$invalid">Go</button>
@@ -52,9 +51,20 @@
 
         </ul>
     </div>
-
-    <input type="button" onClick="changeColor('red')" value="Mudar cor" />
-    <input type="button" onClick="changeColor('')" value="Resetar Mudança" />
+    <br>
+    <h2> M3nu </h2>
+    <menu>
+        <changecolor>
+            Change Color:
+            <input type="button" onClick="changeColor('white')" value="White" />
+            <input type="button" onClick="changeColor('rgb(0, 0, 77)')" value="Darkblue" />
+            <input type="button" onClick="changeColor('')" value="Reset Color" />
+        </changecolor>
+        <br>
+        <br> Contact:
+        <input type="button" value="GitHub" onclick="window.open('https://github.com/RonaldoMPF')" />
+    </menu>
+    <credits>Made by Ronaldo Medeiros for Information Systems I UFCG</credits>
 </body>
 
 </html>

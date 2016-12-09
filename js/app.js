@@ -1,9 +1,13 @@
  angular.module('ToDo', []).
  controller('todoController', ['$scope', function($scope) {
      $scope.todos = [{
-         'title': 'Build a todo app',
-         'done': false
-     }];
+             'title': 'Build a todo app',
+             'done': false
+         },
+
+         { 'title': "Play Dark Souls", 'done': false },
+         { 'title': "Ancient aliens building the pyramids", 'done': false }
+     ];
 
      $scope.addTodo = function() {
          $scope.todos.push({
@@ -19,7 +23,7 @@
 
      };
 
-     $scope.clearAll() = function() {
+     $scope.clearAll = function() {
          $scope.todos = [];
      };
 
@@ -39,3 +43,7 @@
 
 
  }])
+
+ function changeColor(color) {
+     document.body.style.background = color;
+ }
