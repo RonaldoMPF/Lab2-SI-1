@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+    font-family: monospace;
+}
+
+div {
+    color: green;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    list-style-position: inside;
+}
